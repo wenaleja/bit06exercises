@@ -50,14 +50,3 @@ function checkPermitido() {
   });
 }
 checkPermitido();
-/*
-  if (
-    obj.username === permitido.username &&
-    parseInt(obj.password) === permitido.password &&
-    obj.accept === permitido.accept
-  ) {
-    alert("hola");
-    
-  } else {
-    alert("Acceso Denegado, el usuario no es permitido", "warning");
-  } */
