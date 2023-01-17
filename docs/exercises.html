@@ -1,12 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/exercises.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejercicios</title>
-</head>
-<body>
-</body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./css/exercises.css"> 
+  </head>
+  <body class="container ejercicios">
+    <h1 class="titulo">Ejercicios</h1>
+    <hr>
+    <section>
+        <h2>1 Pedir nombre al usuario y saludarlo.</h2>
+        <div id="liveAlertPlaceholder"></div>
+        <form id="form1">
+        <div class="mb-3">
+          <label for="name" class="form-label">Escribe tu nombre.<span>*</span></label>
+          <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name">
+        </div>
+        <button type="submit" class="btn"id="liveAlertBtn" >Saludar</button>
+      </form>
+    </section>
+    <br>
+    <section>
+        <h2>2 Pedir edad al usuario y responder si es o no es mayor de edad.</h2>
+        <div id="liveAlertPlaceholder2"></div>
+        <form id="form2">
+            <div class="mb-3">
+              <label for="edad" class="form-label">Ingresa tu edad<span>*</span></label>
+              <input type="text" class="form-control" id="edad" aria-describedby="numberHelp">
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+          </form>
+    </section>
+    <br>
+    <section>
+      <h2>3
+        <h3>
+            <ul>
+                <li>Pedir Nombre Y Edad Al Usuario. Si Se Llama Pepita 
+                 Y Es Mayor De Edad Permitir Ingreso A La Sala De Espera #1.</li> 
+                 <li>Si Se Llama Pepita Y Es Menor De Edad Permitir Ingreso A La Sala #2</li>
+                 <li>Si No Es Pepita Pero Es Mayor De Edad Ingreso A La Sala #3</li>
+                 <li>Si No Se Llama Pepita Y No Es Mayor De Edad Dirigir A La Sala #4</li>
+               </ul> 
+        </h3>
+      </h2>
+      <div id="liveAlertPlaceholder3"></div>
+        <form id="form3">
+          <div class="mb-3">
+            <label for="username3" class="form-label">Nombre<span>*</span></label>  
+            <input type="text" class="form-control" id="username3" aria-describedby="nameHelp">
+          </div>
+          <div class="mb-3">
+            <label for="edad3" class="form-label">Ingresa tu edad<span>*</span></label>
+            <input type="number" class="form-control" id="edad3">
+          </div>
+          <button type="submit" class="btn">Verificar</button>
+        </form>
+    </section>
+    <br>
+    <sectio>
+     <h2>4 Pedir un número y mostrar los números pares desde 1 hasta n.</h2>
+     <div id="liveAlertPlaceholder4"></div>
+     <form id="form4">
+        <div class="mb-3">
+          <label for="numeropar" class="form-label">Ingresa un numero<span>*</span></label>
+          <input type="text" class="form-control" id="numeropar" aria-describedby="numberHelp" name="numeropar">
+        </div>
+        <button type="submit" class="btn">Resultado</button>
+      </form>
+      <br>
+    </section>
+    <section>
+      <h2>5 Pedir un número, mostrar el doble de n.</h2>
+      <div id="liveAlertPlaceholder5"></div>
+      <form id="form5">
+         <div class="mb-3">
+           <label for="nmrdoble" class="form-label">Ingresa un numero<span>*</span></label>
+           <input type="text" class="form-control" id="nrmdoble" aria-describedby="numberHelp" name="nmrdoble">
+         </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>6 Pedir un número, mostrar el triple n.</h2>
+      <div id="liveAlertPlaceholder6"></div>
+      <form id="form6">
+         <div class="mb-3">
+           <label for="nmrtriple" class="form-label">Ingresa un número<span>*</span></label>
+           <input type="text" class="form-control" id="nmrtriple" aria-describedby="numberHelp" name="nmrtriple">
+         </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>7 Pedir un número, mostrar la mitad de n.</h2>
+      <div id="liveAlertPlaceholder7"></div>
+      <form id="form7">
+         <div class="mb-3">
+      <label for="mitadnmr" class="form-label">Ingresa un número<span>*</span></label>
+           <input type="text" class="form-control" id="mitadnmr" aria-describedby="numberHelp" name="mitadnmr">
+         </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>8 Pedir un número, mostrar la tercera parte de n.</h2>
+      <div id="liveAlertPlaceholder8"></div>
+      <form id="form8">
+         <div class="mb-3">
+      <label for="3ranmr" class="form-label">Ingresa un número<span>*</span></label>
+           <input type="text" class="form-control" id="3ranmr" aria-describedby="numberHelp" name="terceranmr">
+         </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>9 Pedir un número, mostrar el cuadrado de n.</h2>
+      <div id="liveAlertPlaceholder9"></div>
+      <form id="form9">
+         <div class="mb-3">
+      <label for="cuadradonmr" class="form-label">Ingresa un número<span>*</span></label>
+           <input type="text" class="form-control" id="cuadradonmr" aria-describedby="numberHelp" name="cuadradonmr">
+           </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>10 Pedir un número, mostrar n reducido en 5.</h2>
+      <div id="liveAlertPlaceholder10"></div>
+      <form id="form10">
+         <div class="mb-3">
+      <label for="reducidonmr" class="form-label">Ingresa un número<span>*</span></label>
+           <input type="text" class="form-control" id="reducidonmr" aria-describedby="numberHelp" name="reducidonmr">
+         </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>11 Pedir un número, mostrar el doble de n más 4.</h2>
+      <div id="liveAlertPlaceholder11"></div>
+      <form id="form11">
+         <div class="mb-3">
+      <label for="doblen" class="form-label">Ingresa un número<span>*</span></label>
+           <input type="text" class="form-control" id="doblen" aria-describedby="numberHelp" name="doblen">
+         </div>
+         <button type="submit" class="btn">Resultado</button>
+       </form>
+     </section>
+     <br>
+     <section>
+      <h2>12 Pedir un número, mostrar si es positivo, negativo o si es cero.</h2>
+      <div id="liveAlertPlaceholder12"></div>
+      <form id="form12">
+        <div class="mb-3">
+     <label for="nmrpositivonegativo" class="form-label">Ingresa un número<span>*</span></label>
+          <input type="text" class="form-control" id="nmrpositivonegativo" aria-describedby="numberHelp" name="nmrpositivonegativo">
+        </div>
+        <button type="submit" class="btn">Resultado</button>
+      </form>
+    </section>
+    <br>
+    <section>
+      <h2>13 Pedir un número, mostrar si es par, impar o si es cero.</h2>
+      <div id="liveAlertPlaceholder13"></div>
+      <form id="form13">
+        <div class="mb-3">
+     <label for="parimpar" class="form-label">Ingresa un número<span>*</span></label>
+          <input type="text" class="form-control" id="parimpar" aria-describedby="numberHelp" name="parimpar">
+        </div>
+        <button type="submit" class="btn">Resultado</button>
+      </form>
+    </section>
+    <br>
+    <section>
+      <h2>14 Pedir un número, mostrar si es un número primo o no.</h2>
+      <div id="liveAlertPlaceholder14"></div>
+      <form id="form14">
+        <div class="mb-3">
+     <label for="nmrprimo" class="form-label">Ingresa un número<span>*</span></label>
+          <input type="text" class="form-control" id="nmrprimo" aria-describedby="numberHelp" name="nmrprimo">
+        </div>
+        <button type="submit" class="btn">Resultado</button>
+      </form>
+    </section>
+    <br>
+    <section>
+      <h2>15 Pedir dos números, mostrar la suma y la Resta</h2>
+      <div id="liveAlertPlaceholder15"></div>
+      <form id="form15">
+        <div class="mb-3">
+          <label for="numero15" class="form-label">Ingresa primer número<span>*</span></label>  
+          <input type="text" class="form-control" id="numero15" aria-describedby="nameHelp" name="numero15">
+        </div>
+        <div class="mb-3">
+          <label for="nmr15" class="form-label">Ingresa segundo número<span>*</span></label>
+          <input type="text" class="form-control" id="nm15" name="nmr15">
+        </div>
+        <button type="submit" class="btn">Resultado</button>
+      </form>
+  </section>
+  <br>
+  <section>
+    <h2>16 Pedir dos números, mostrar la Multiplicación y División.</h2>
+    <div id="liveAlertPlaceholder16"></div>
+    <form id="form16">
+      <div class="mb-3">
+        <label for="numero16" class="form-label">Ingresa primer número<span>*</span></label>  
+        <input type="text" class="form-control" id="numero16" aria-describedby="nameHelp" name="numero16">
+      </div>
+      <div class="mb-3">
+        <label for="nmr16" class="form-label">Ingresa segundo número<span>*</span></label>
+        <input type="text" class="form-control" id="nm16" name="nmr16">
+      </div>
+      <button type="submit" class="btn">Resultado</button>
+    </form>
+</section>
+<br>
+<section>
+  <h2>17 Pedir dos números, mostrar el resto División.</h2>
+  <div id="liveAlertPlaceholder17"></div>
+  <form id="form17">
+    <div class="mb-3">
+      <label for="restoDivision1" class="form-label">Ingresa primer número<span>*</span></label>  
+      <input type="text" class="form-control" id="restoDivision1" aria-describedby="nameHelp" name="restoDivision1">
+    </div>
+    <div class="mb-3">
+      <label for="restoDivision2" class="form-label">Ingresa segundo número<span>*</span></label>
+      <input type="text" class="form-control" id="restoDivision2" name="restoDivision2">
+    </div>
+    <button type="submit" class="btn">Resultado</button>
+  </form>
+</section>
+<br>
+<section>
+  <h2>18 Pedir dos números, mostrar si el primero es divisible por el segundo.</h2>
+  <div id="liveAlertPlaceholder18"></div>
+  <form id="form18">
+    <div class="mb-3">
+      <label for="Divisible1" class="form-label">Ingresa primer número<span>*</span></label>  
+      <input type="text" class="form-control" id="Divisible1" aria-describedby="nameHelp" name="Divisible1">
+    </div>
+    <div class="mb-3">
+      <label for="Divisible2" class="form-label">Ingresa segundo número<span>*</span></label>
+      <input type="text" class="form-control" id="Divisible2" name="Divisible2">
+    </div>
+    <button type="submit" class="btn">Resultado</button>
+  </form>
+</section>
+<br>
+<section>
+  <h2>19 Pedir dos números y el nombre de un Operacion.</h2>
+  <div id="liveAlertPlaceholder19"></div>
+  <form id="form19">
+      <label for="operacion1" class="form-label">Ingresa primer número<span>*</span></label>  
+      <input type="text" class="form-control" id="operacion1" aria-describedby="nameHelp" name="operacion1">
+    </div>
+    <div class="mb-3">
+      <label for="operacion2" class="form-label">Ingresa segundo número<span class=>*</span></label>
+      <input type="text" class="form-control" id="operacion2" name="operacion2">
+    </div>
+    <div class="mb-3"><div class="mb-3">
+      <label for="operacion3" class="form-label">Ingresa una operación: sumar, restar, multiplicar o dividir<span>*</span></label>  
+      <input type="text" class="form-control" id="operacion3" aria-describedby="nameHelp" name="operacion3">
+    </div>
+    <br>
+    <button type="submit" class="btn">Resultado</button>
+  </form>
+</section>
+<br>
+<section>
+  <h2>20 Pedir un número, mostrar la suma desde 1 hasta n.</h2>
+  <div id="liveAlertPlaceholder20"></div>
+  <form id="form20">
+    <div class="mb-3">
+ <label for="suma20" class="form-label">Ingresa un número<span>*</span></label>
+      <input type="text" class="form-control" id="suma20" aria-describedby="numberHelp" name="suma20">
+    </div>
+    <button type="submit" class="btn">Resultado</button>
+  </form>
+</section>
+<br>
+<section>
+<h2>21 Pedir un número, mostrar la suma de los números pares desde 1 hasta n. </h2>
+<div id="liveAlertPlaceholder21"></div>
+  <form id="form21">
+    <div class="mb-3">
+ <label for="suma21" class="form-label">Ingresa un número<span>*</span></label>
+      <input type="text" class="form-control" id="suma21" aria-describedby="numberHelp" name="suma21">
+    </div>
+    <button type="submit" class="btn">Resultado</button>
+  </form>
+</section>
+<section>
+  <h2>22 Pedir un número, mostrar la suma de los números impares desde 1 hasta n. </h2>
+  <div id="liveAlertPlaceholder22"></div>
+    <form id="form22">
+      <div class="mb-3">
+   <label for="suma22" class="form-label">Ingresa un número<span>*</span></label>
+        <input type="text" class="form-control" id="suma22" aria-describedby="numberHelp" name="suma22">
+      </div>
+      <button type="submit" class="btn">Resultado</button>
+    </form>
+  </section>
+  <br>
+  <section>
+  <h2>23 Pedir un número, mostrar los multiplos de 3 desde 1 hasta n. </h2>
+  <div id="liveAlertPlaceholder23"></div>
+    <form id="form23">
+      <div class="mb-3">
+   <label for="multiplos" class="form-label">Ingresa un número<span>*</span></label>
+        <input type="text" class="form-control" id="multiplos" aria-describedby="numberHelp" name="multiplos">
+      </div>
+      <button type="submit" class="btn">Resultado</button>
+    </form>
+  </section>
+  <br>
+  <section>
+    <h2>24 Pedir un número, mostrar los números desde n hasta 0. </h2>
+    <div id="liveAlertPlaceholder24"></div>
+      <form id="form24">
+        <div class="mb-3">
+     <label for="nmr0" class="form-label">Ingresa un número<span>*</span></label>
+          <input type="text" class="form-control" id="nmr0" aria-describedby="numberHelp" name="nmr0">
+        </div>
+        <button type="submit" class="btn">Resultado</button>
+      </form>
+    </section>
+<script src="./js/exercises.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
 </html>

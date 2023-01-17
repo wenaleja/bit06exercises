@@ -1,3 +1,31 @@
 body{
-    background: url(../img/img-01.png);
+    background: url(../img/fondo.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+.titulo{
+    padding-top: 10rem;
+    font-family: 'Pontano Sans', sans-serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+h2{
+    color: lightcoral;
+}
+h6{
+    color: lightcoral;
+}
+h3{
+    color: aliceblue;
+    font-size: 16px;
+}
+.form-label{
+    color: aliceblue;
+}
+
+.btn {
+    color: lightpink;
 }

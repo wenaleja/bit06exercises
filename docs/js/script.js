@@ -1,98 +1,63 @@
-// CONSTANTES Y VARIABLES
-const $form = document.getElementById('form-box');
-const $legend = document.getElementsByTagName('legend')[0];
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+"use strict";
+const $form = document.getElementById("form");
+const $legend = document.getElementsByTagName("legend")[0];
+const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
 
-// OBJECTOS
-const formulario = {
-  username: null,
-  password: null,
-  accept: null,
+const permitido = {
+  username: "bit",
+  password: 2023,
+  accept: true,
 };
 
-// FUNCIONES
-const alert = (message, type) => {
-  const wrapper = document.createElement('div');
+const alert = (menssage, type) => {
+  const wrapper = document.createElement("div");
   wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>',
-  ].join('');
-  alertPlaceholder.append(wrapper);
+    `<div class="alert alert-${type} alert-dismissible" role="alert"`,
+    `   <div>${menssage}</div>`,
+    '   <button class="btn-close" type="submit"></button>',
+    " </div>",
+  ].join("");
 };
 
-function checkFormulario() {
-  if (formulario.username && formulario.password && formulario.accept)
+function esValidoForm() {
+  if (permitido.username && permitido.password && permitido.accept) {
     return true;
-  else return false;
-}
-
-function checkPermitido(obj) {
-  try {
-    const permitido = {
-      username: 'bit',
-      password: 2023,
-      accept: true,
-    };
-    if (
-      obj.username === permitido.username &&
-      parseInt(obj.password) === permitido.password &&
-      obj.accept === permitido.accept
-    ) {
-      window.open('http://127.0.0.1:5500/docs/exercises.html', '_self');
-    } else {
-      alert(
-        'Acceso denegado, usuario no permitido, revisa tus credenciales.',
-        'warning'
-      );
-    }
-  } catch (error) {
-    console.log('se produjo un error en la función checkPermitido:', error);
-  }
-  if (obj) {
-    const permitido = {
-      username: 'jhonatansanchez',
-      password: 1234567,
-      accept: true,
-    };
-    if (
-      obj.username === permitido.username &&
-      parseInt(obj.password) === permitido.password &&
-      obj.accept === permitido.accept
-    ) {
-      console.log('permitir acceso ...');
-    } else {
-      console.log('denegar acceso ...');
-    }
   } else {
-    console.log('falta el objecto');
+    return false;
   }
 }
 
-// EVENTOS
-$form.username.addEventListener('input', (e) => {
-  formulario.username = e.target.value;
-});
+function checkPermitido() {
+  $form.username.addEventListener("input", (e) => {
+    permitido.username = e.target.value;
+  });
+  $form.password.addEventListener("input", (e) => {
+    permitido.password = e.target.value;
+  });
+  $form.accept.addEventListener("click", (e) => {
+    permitido.accept = e.target.value;
+  });
 
-$form.password.addEventListener('input', (e) => {
-  formulario.password = e.target.value;
-});
-
-$form.accept.addEventListener('change', (e) => {
-  formulario.accept = e.target.checked;
-});
-
-$form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (!formulario.username || !formulario.password || !formulario.accept) {
-    $legend.classList.add('text-danger');
-    console.log('error...');
-  }
-  if (checkFormulario() === true) {
-    checkPermitido(formulario);
+  $form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (esValidoForm() === true) {
+      window.location.href =
+        "https://wenaleja.github.io/bit06exercises/exercises.html";
+    } else {
+      $legend.classList.add("text-danger");
+      alert("todos los campos son obligatorios", "danger");
+    }
+  });
+}
+checkPermitido();
+/*
+  if (
+    obj.username === permitido.username &&
+    parseInt(obj.password) === permitido.password &&
+    obj.accept === permitido.accept
+  ) {
+    alert("hola");
+    
   } else {
-    $legend.classList.add('text-danger');
-    alert('Todos los campos son obligatorios.', 'danger');
-  }
-});
+    alert("Acceso Denegado, el usuario no es permitido", "warning");
+  } */

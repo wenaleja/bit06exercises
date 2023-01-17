@@ -15,7 +15,7 @@ section{
     background-position: center;
     background-size: cover;
 }
-.form-box{
+.form{
     position: relative;
     width: 400px;
     height: 450px;
@@ -30,6 +30,11 @@ section{
 h2{
     font-size: 2em;
     color: aliceblue;
+    text-align: center;
+}
+.legend{
+    font-size: 1em;
+    color: #fff;
     text-align: center;
 }
 .inputbox{
@@ -111,3 +116,4 @@ button{
 .register p a:hover{
     text-decoration: underline;
 }
+
